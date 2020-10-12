@@ -81,12 +81,28 @@
         #logo{
             width: 100%;
         }
+        .inner>img:hover{
+            opacity: 0.5;
+            cursor: pointer;
+        }
         .inner{
             width: 1280px;
             height: 150px;
             margin: 0 auto;
             padding-top: 80px;
             text-align: center;
+        }
+        .logo_sns{
+            text-align: left;
+        }
+        .logo_sns li{
+            display: inline-block;
+            cursor: pointer;
+        }
+        .logo_sns img{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
         }
     </style>
 </head>
@@ -139,7 +155,23 @@
     <!-- 상단 메뉴바 끝-->
     <div id="logo">
         <div class="inner">
-            <img src="img/logo.png" alt="로고">
+            <img src="img/logo.png" alt="로고" onclick="window.open('index.html', '_self')">
+            <div class="logo_sns">
+                <ul>
+                    <li>
+                        <img src="img/네이버밴드2.png" alt="네이버 벤드" onmouseover="src='img/네이버밴드.png'" onmouseout="src='img/네이버밴드2.png'" onclick="window.open('http://band.us/home')">
+                    </li>
+                    <li>
+                        <img src="img/인스타그램2.png" alt="인스타그램" onmouseover="src='img/인스타그램1.png'" onmouseout="src='img/인스타그램2.png'" onclick="window.open('https://www.instagram.com/?hl=ko')">
+                    </li>
+                    <li>
+                        <img src="img/카카오스토리2.png" alt="네이버 벤드" onmouseover="src='img/카카오스토리1.png'" onmouseout="src='img/카카오스토리2.png'" onclick="window.open('https://accounts.kakao.com/login/kakaostory')">
+                    </li>
+                    <li>
+                        <img src="img/페이스북2.png" alt="네이버 벤드" onmouseover="src='img/페이스북.png'" onmouseout="src='img/페이스북2.png'" onclick="window.open('https://www.facebook.com/')">
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </body>
