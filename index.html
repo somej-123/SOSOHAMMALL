@@ -17,6 +17,7 @@
         a{
             text-decoration: none;
         }
+        /* 헤더 */
         header{
             position: fixed;
             width: 100%;
@@ -24,6 +25,7 @@
             height: 34px;
             border-bottom: 1px solid #e0e0e0;
         }
+        /*상단 메뉴 네비*/
         nav{
             width: 1280px;
             margin: 0 auto;
@@ -78,22 +80,30 @@
         .right_nav li:nth-child(5)::after{
             display: none;
         }
+        /*상단 메뉴 네비 끝*/
         #logo{
             width: 100%;
+        }
+        .inner{
+            width: 1280px;
+            height: 180px;
+            margin: 0 auto;
+            padding-top: 80px;
+            text-align: center;
         }
         .inner>img:hover{
             opacity: 0.5;
             cursor: pointer;
         }
-        .inner{
-            width: 1280px;
-            height: 150px;
-            margin: 0 auto;
-            padding-top: 80px;
-            text-align: center;
+        .inner>img{
+            clear: both;
         }
         .logo_sns{
             text-align: left;
+            width: 50%;
+        }
+        .logo_sns ul{
+            margin-top: 30px;
         }
         .logo_sns li{
             display: inline-block;
@@ -103,6 +113,15 @@
             width: 30px;
             height: 30px;
             border-radius: 50%;
+        }
+        .logo_nav{
+            width: 100%;
+            border-top: 5px solid #212121;
+            margin: 0 auto;
+        }
+        .logo_navInner{
+            width: 1280px;
+            
         }
     </style>
 </head>
@@ -153,6 +172,7 @@
         <!--네비게이션 끝-->
     </header>
     <!-- 상단 메뉴바 끝-->
+    <!-- 로고 이미지 및 sns 버튼-->
     <div id="logo">
         <div class="inner">
             <img src="img/logo.png" alt="로고" onclick="window.open('index.html', '_self')">
@@ -172,6 +192,15 @@
                     </li>
                 </ul>
             </div>
+            <div class="logo_search">
+                
+            </div>
+        </div>
+    </div>
+    <!-- 로고 이미지 및 sns 버튼 끝-->
+    <div class="logo_nav">
+        <div class="logo_navInner">
+
         </div>
     </div>
 </body>
