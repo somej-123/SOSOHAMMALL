@@ -13,6 +13,7 @@
         }
         body{
             width: 100%;
+            height: 1500px;
         }
         a{
             text-decoration: none;
@@ -24,6 +25,7 @@
             padding: 8px 0;
             height: 34px;
             border-bottom: 1px solid #e0e0e0;
+            background-color: #fff;
         }
         /*상단 메뉴 네비*/
         nav{
@@ -100,7 +102,7 @@
         }
         .logo_sns{
             text-align: left;
-            width: 50%;
+            width: 100%;
         }
         .logo_sns ul{
             margin-top: 30px;
@@ -114,14 +116,84 @@
             height: 30px;
             border-radius: 50%;
         }
+        .search{
+            float: right;
+            position: relative;
+        }
+        .search_box{
+            width: 200px;
+            height: 30px;
+            border: 1px solid rgb(128, 128, 128);
+            border-radius: 5px;
+        }
+        .search_box:focus{
+            outline: none;
+        }
+        input{
+            vertical-align: middle;
+        }
+        .search_submit{
+            background-image: url("img/search.png");
+            background-size: 100% 100%;
+            background-color: #fff;
+            cursor: pointer;
+            border: none;
+            position: relative;
+            top: 7px;
+            width: 25px;
+            height: 25px;
+        }
         .logo_nav{
+            background-color: #fff;
             width: 100%;
-            border-top: 5px solid #212121;
-            margin: 0 auto;
+            border-top: 3px solid #212121;
+            height: 50px;
         }
         .logo_navInner{
             width: 1280px;
-            
+            margin: 0 auto;
+            padding: 10px;
+            text-align: center;
+        }
+        .logo_navInner::after{
+            clear: both;
+        }
+        .logo_navInner ul{
+            width: 1250px;
+            list-style: none;
+            float: left;
+        }
+        .toggle_menu{
+            cursor: pointer;
+        }
+        .logo_navInner li{
+            padding-top: 2px;
+            width: 100px;
+            height: 30px;
+            display: inline-block;
+            text-align: center;
+            margin: 0 10px;
+            font-size: 13px;
+            font-weight: bold;
+        }
+        .logo_navInner a, .logo_navInnera:visited{
+            color: black;
+        }
+        #section1{
+            width: 100%;
+            height: 700px;
+            overflow: hidden;
+        }
+        .slide{
+            width: 400%;
+        }
+        .slide li{
+            width: 25%;
+            float: left;
+        }
+        #section1 img{
+            width: 100%;
+            height: 700px;
         }
     </style>
 </head>
@@ -190,18 +262,79 @@
                     <li>
                         <img src="img/페이스북2.png" alt="네이버 벤드" onmouseover="src='img/페이스북.png'" onmouseout="src='img/페이스북2.png'" onclick="window.open('https://www.facebook.com/')">
                     </li>
+                    <li class="search">
+                        <form action="">
+                            <input type="text" placeholder="검색어를 입력해주세요" class="search_box">
+                            <button type="submit" class="search_submit"></button>
+                        </form>
+                    </li>
                 </ul>
-            </div>
-            <div class="logo_search">
-                
             </div>
         </div>
     </div>
     <!-- 로고 이미지 및 sns 버튼 끝-->
+    <!-- fixed가 될 메뉴창-->
     <div class="logo_nav">
         <div class="logo_navInner">
-            
+            <img src="img/menu.png" alt="토글메뉴" width="30" height="30" style="float: left;" class="toggle_menu">
+            <ul>
+                <li>
+                    <a href="#">BEST 30</a>
+                </li>
+                <li>
+                    <a href="#">new 5%</a>
+                </li>
+                <li>
+                    <a href="#">EVENT SALE</a>
+                </li>
+                <li>
+                    <a href="#">SEASON</a>
+                </li>
+            </ul>
         </div>
     </div>
+    <!-- fixed가 될 메뉴창 끝-->
+    <!-- 슬라이드 시작 -->
+    <section id="section1">
+        <ul class="slide">
+            <li>
+                <a href="#">
+                    <img src="img/slide1.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/slide2.jpg">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="img/slide3.jpg">
+                </a>
+            </li>
+        </ul>
+    </section>
+    <script>
+        $(document).ready(function(){
+
+            $(window).scroll(function(){
+                if($('html').scrollTop() >= 212){
+                    $('.logo_nav').css({
+                        "position":"fixed",
+                        "top":50,
+                        "border-top":"none"
+                        });
+                }else{
+                    $('.logo_nav').css({
+                        "position":"static",
+                        "border-top":"3px solid black"
+                        
+                    })
+                }
+                console.log($('html').scrollTop());
+            });
+
+        });
+    </script>
 </body>
 </html>
