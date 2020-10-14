@@ -26,6 +26,7 @@
             height: 34px;
             border-bottom: 1px solid #e0e0e0;
             background-color: #fff;
+            z-index: 98;
         }
         /*상단 메뉴 네비*/
         nav{
@@ -146,15 +147,17 @@
         }
         .logo_nav{
             background-color: #fff;
-            width: 100%;
+            min-width: 1280px;
             border-top: 3px solid #212121;
             height: 50px;
+            z-index: 99;
         }
         .logo_navInner{
             width: 1280px;
             margin: 0 auto;
             padding: 10px;
             text-align: center;
+            position: relative;
         }
         .logo_navInner::after{
             clear: both;
@@ -180,21 +183,160 @@
         .logo_navInner a, .logo_navInnera:visited{
             color: black;
         }
+        .toggle_nav{
+            position: absolute;
+            width: 1280px;
+            height: 300px;
+            background-color: #fff;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 10;
+            display: none;
+            border-top: 1px solid #000;
+            border-radius: 0 0 10px 10px;
+        }
+        .toggle_navInner ul{
+            text-align: center;
+            height: 150px;
+            width: 316px;
+            display: inline-block;
+            list-style: none;
+            letter-spacing: 3px;
+        }
+        .toggle_navInner li{
+            margin-top: 15px;
+        }
+        .toggle_navInner ul:nth-child(1)::after{
+            content: "";
+            width: 1px;
+            height: 200px;
+            background-color: #9e9e9e;
+            position: absolute;
+            top: 30px;
+            left: 300px;
+        }
+        .toggle_navInner ul:nth-child(2)::after{
+            content: "";
+            width: 1px;
+            height: 200px;
+            background-color: #9e9e9e;
+            position: absolute;
+            top: 30px;
+            left: 650px;
+        }
+        .toggle_navInner ul:nth-child(3)::after{
+            content: "";
+            width: 1px;
+            height: 200px;
+            background-color: #9e9e9e;
+            position: absolute;
+            top: 30px;
+            right: 300px;
+        }
+        .toggle_navInner hr{
+            margin: 5px auto;
+            height: 2px;
+            width: 100px;
+            border-radius: 40%;
+            background-color: black;
+        }
+        .toggle_navInner a, .toggle_navInner a:visited{
+            color: rgb(128, 128, 128);
+            font-weight: bold;
+            font-size: 16px;
+        }
+        .toggle_navInner a:hover{
+            color: #000;
+        }
         #section1{
-            width: 100%;
+            min-width: 1280px;
             height: 700px;
             overflow: hidden;
+            position: relative;
+            z-index: 9;
         }
         .slide{
-            width: 400%;
+            width: 100%;
+            height: 700px;
+            position: relative;
         }
-        .slide li{
-            width: 25%;
-            float: left;
+        .slide::after{
+            position: relative;
+        }
+        .slide>li{
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
         }
         #section1 img{
             width: 100%;
             height: 700px;
+        }
+        .dot{
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            z-index: 30;
+            bottom: 30px;
+        }
+        .dot li{
+            cursor: pointer;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 10px;
+            width: 30px;
+            height: 8px;
+            text-indent: -999999px;
+            background-color: #fff;
+        }
+        .dot li.on{
+            background-color: #414040;
+        }
+        .left_btn{
+            position:absolute;
+            z-index: 10;
+            top: 0;
+            left: 0;
+            color: rgba(128,128,128);
+            width: 50px;
+            height: 100%;
+            cursor: pointer;
+        }
+        .left_btn:hover{
+            background: linear-gradient( to left, transparent,  rgba(255,255,255,0.3) );
+            color: #fff;
+        }
+        .left_btn h1{
+            z-index: 11;
+            position: relative;
+            margin-left: 10px;
+            font-size: 50px;
+            top: 50%;
+            font-weight: lighter;
+        }
+        .right_btn{
+            position:absolute;
+            z-index: 10;
+            top: 0;
+            right: 0;
+            color: rgba(128,128,128);
+            width: 50px;
+            height: 100%;
+            cursor: pointer;
+        }
+        .right_btn:hover{
+            background: linear-gradient( to right, transparent,  rgba(255,255,255,0.3) );
+            color: #fff;
+        }
+        .right_btn h1{
+            z-index: 11;
+            position: relative;
+            margin-left: 10px;
+            font-size: 50px;
+            top: 50%;
+            font-weight: lighter;
         }
     </style>
 </head>
@@ -294,43 +436,157 @@
             </ul>
         </div>
     </div>
+    <div class="toggle_nav">
+        <div class="toggle_navInner">
+            <ul>
+                <li>
+                    <h2>가구/수납</h2>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">수납/정리</a>
+                </li>
+                <li>
+                    <a href="#">행거/훅</a>
+                </li>
+                <li>
+                    <a href="#">바구니/박스</a>
+                </li>
+                <li>
+                    <a href="#">선반/수납장</a>
+                </li>
+                <li>
+                    <a href="#">데스크/책장수납</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>페브릭/생활</h2>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">커튼</a>
+                </li>
+                <li>
+                    <a href="#">침구</a>
+                </li>
+                <li>
+                    <a href="#">카페트/러그</a>
+                </li>
+                <li>
+                    <a href="#">페브릭소품</a>
+                </li>
+                <li>
+                    <a href="#">홈케어</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>데코/조명</h2>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">조명/스탠드</a>
+                </li>
+                <li>
+                    <a href="#">시계/그림</a>
+                </li>
+                <li>
+                    <a href="#">플라워</a>
+                </li>
+                <li>
+                    <a href="#">캔들/디퓨저</a>
+                </li>
+                <li>
+                    <a href="#">DIY/데코소품</a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <h2>키친</h2>
+                </li>
+                <hr>
+                <li>
+                    <a href="#">컵/텀블러/커피잔</a>
+                </li>
+                <li>
+                    <a href="#">식기</a>
+                </li>
+                <li>
+                    <a href="#">주방잡화/커트러리</a>
+                </li>
+                <li>
+                    <a href="#">조리도구</a>
+                </li>
+                <li>
+                    <a href="#">주방수납</a>
+                </li>
+            </ul>
+        </div>
+    </div>
     <!-- fixed가 될 메뉴창 끝-->
     <!-- 슬라이드 시작 -->
     <section id="section1">
         <ul class="slide">
             <li>
                 <a href="#">
-                    <img src="img/slide1.jpg">
+                    <img src="img/slide1.jpg" alt="슬라이드1">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/slide2.jpg">
+                    <img src="img/slide2.jpg" alt="슬라이드2" style="display: none;">
                 </a>
             </li>
             <li>
                 <a href="#">
-                    <img src="img/slide3.jpg">
+                    <img src="img/slide3.jpg" alt="슬라이드3" style="display: none;">
                 </a>
             </li>
         </ul>
+        <ul class="dot">
+            <li class="on">1</li>
+            <li>2</li>
+            <li>3</li>
+        </ul>
+        <div class="left_btn">
+            <h1>&#60;</h1>
+        </div>
+        <div class="right_btn">
+            <h1>&#62;</h1>
+        </div>
     </section>
     <script>
         $(document).ready(function(){
+
+            $('.toggle_menu').click(function(){
+                $('.toggle_nav').fadeToggle();
+            });
 
             $(window).scroll(function(){
                 if($('html').scrollTop() >= 212){
                     $('.logo_nav').css({
                         "position":"fixed",
                         "top":50,
-                        "border-top":"none"
+                        "border-top":"none",
+                        "width":"100%"
                         });
+                    $('.toggle_nav').css({
+                        "position":"fixed",
+                        "top":100
+                    });
                 }else{
                     $('.logo_nav').css({
                         "position":"static",
-                        "border-top":"3px solid black"
-                        
-                    })
+                        "border-top":"3px solid black" 
+                    });
+                    $('.toggle_nav').css({
+                        "position":"absolute",
+                        "left":0,
+                        "right":0,
+                        "margin":"auto",
+                        "top":313
+                    });
                 }
                 console.log($('html').scrollTop());
             });
