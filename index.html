@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- jquery 최신버전 사용-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/slide.js"></script>
     <title>SOSOHAM::</title>
     <style>
         *{
@@ -199,7 +200,7 @@
         .toggle_navInner ul{
             text-align: center;
             height: 150px;
-            width: 316px;
+            width: 315px;
             display: inline-block;
             list-style: none;
             letter-spacing: 3px;
@@ -533,14 +534,14 @@
                     <img src="img/slide1.jpg" alt="슬라이드1">
                 </a>
             </li>
-            <li>
+            <li style="opacity: 0;">
                 <a href="#">
-                    <img src="img/slide2.jpg" alt="슬라이드2" style="display: none;">
+                    <img src="img/slide2.jpg" alt="슬라이드2">
                 </a>
             </li>
-            <li>
+            <li style="opacity: 0;">
                 <a href="#">
-                    <img src="img/slide3.jpg" alt="슬라이드3" style="display: none;">
+                    <img src="img/slide3.jpg" alt="슬라이드3">
                 </a>
             </li>
         </ul>
@@ -556,13 +557,14 @@
             <h1>&#62;</h1>
         </div>
     </section>
+    <!-- 슬라이드 구간 끝 -->
     <script>
         $(document).ready(function(){
-
+            //.toggle_menu 실행
             $('.toggle_menu').click(function(){
                 $('.toggle_nav').fadeToggle();
             });
-
+            //스크롤 시 header fixed만들기
             $(window).scroll(function(){
                 if($('html').scrollTop() >= 212){
                     $('.logo_nav').css({
@@ -588,9 +590,7 @@
                         "top":313
                     });
                 }
-                console.log($('html').scrollTop());
             });
-
         });
     </script>
 </body>
