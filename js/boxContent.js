@@ -44,7 +44,7 @@ $(document).ready(function(){
             $box_content.stop().fadeOut();
             $box_content.eq(now_num).stop().fadeIn();
         }
-        autoPlay();
+        autoPlay2();
     }
     init2();
     box_slider();
