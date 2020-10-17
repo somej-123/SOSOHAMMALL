@@ -17,7 +17,7 @@ $(document).ready(function(){
     }
     function box_slider(){
 
-        function autoPlay(){
+        function autoPlay2(){
             $count = setInterval(function(){
                 go();
             },5000);
@@ -28,7 +28,7 @@ $(document).ready(function(){
         });
 
         $('.se2_box').mouseleave(function(){
-            autoPlay();
+            autoPlay2();
         })
 
         function go(){
