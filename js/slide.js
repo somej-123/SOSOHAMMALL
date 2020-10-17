@@ -22,17 +22,17 @@ $(document).ready(function(){
             // $index 에 $dotli>.on의 순서(숫자)를 대입한다.
             $index = $(this).index();
             //fadeMove 함수 실행
-            fadeMove().stop();
+            fadeMove();
         });
         //오른쪽 버튼을 클릭하면
         $('.right_btn').click(function(){
             //nextChkPlay 함수 실행
-            nextChkPlay().stop();
+            nextChkPlay();
         });
         //왼쪽 버튼을 클릭하면
         $('.left_btn').click(function(){
             //prevChkPlay 함수 실행
-            prevChkPlay().stop();
+            prevChkPlay();
         });
         //setInterval 함수를 사용한 자동 슬라이드
         autoPlay();
@@ -93,7 +93,7 @@ $(document).ready(function(){
     //자동함수 멈추는 함수
     function autoPlayStop(){
         //.slide에 마우스를 올렸을 경우
-        $('#section1').mouseenter(function(){
+        $('#section1 a').mouseenter(function(){
             //auto라는 변수의 setInterval함수 정지
             clearInterval(auto);
         });
@@ -101,7 +101,7 @@ $(document).ready(function(){
     //자동 함수 다시 실행시켜주는 함수
     function autoPlayRestart(){
         //.slide에 마우스를 땔 경우
-        $('#section1').mouseleave(function(){
+        $('#section1 a').mouseleave(function(){
             //auto 라는 변수에 nextChkPlay를 6초마다 반복하는 setInterval 함수 실행
             auto = setInterval(function() {
                 nextChkPlay();
