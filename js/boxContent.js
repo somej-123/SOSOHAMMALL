@@ -12,7 +12,7 @@ $(document).ready(function(){
         $box_content.eq(now_num).stop().fadeIn();
     });
 
-    function init(){
+    function init2(){
         $now_num = $('.se2_box>on').index();
     }
     function box_slider(){
@@ -46,6 +46,6 @@ $(document).ready(function(){
         }
         autoPlay();
     }
-    init();
+    init2();
     box_slider();
 });
