@@ -367,7 +367,7 @@
             background-color: #dadada;
             border-bottom: 1px solid #000;
             border-right: 1px solid #979797;
-            color: #000;
+            color: rgb(99, 99, 99);
             font-size: 14px;
         }
         .box_title li:nth-child(4){
@@ -376,6 +376,7 @@
         .box_title li.on2{
             background-color:#fff;
             border-bottom:none;
+            color: #000;
         }
         .box_content{
             position: absolute;
@@ -390,6 +391,13 @@
         .box_content li{
             margin: 0 20px;
             display: inline-block;
+            position: relative;
+            overflow: hidden;
+            width: 180px;
+            height:230px
+        }
+        .box_content li:hover .caption{
+            transform: translateY(-115px);
         }
         .box_content img{
             width: 180px;
@@ -406,6 +414,17 @@
         }
         .box_4{
             display: none;
+        }
+        .caption{
+            position: absolute;
+            width: 180px;
+            height: 230px;
+            content: "";
+            background-color: rgba(0,0,0,0.5);
+            background-size: 100% 100%;
+            z-index: 45;
+            color: #fff;
+            transition: all ease-in-out 0.5s;
         }
     </style>
 </head>
@@ -574,7 +593,7 @@
             </ul>
             <ul>
                 <li>
-                    <h2>키친</h2>
+                    <h2>주방</h2>
                 </li>
                 <hr>
                 <li>
@@ -638,28 +657,52 @@
                     <li class="on2">가구 / 수납</li>
                     <li>페브릭 / 생활</li>
                     <li>데코 / 조명</li>
-                    <li>키친</li>
+                    <li>주방</li>
                 </ul>
                 <div class="box_content box_1">
                     <ul>
                         <li>
                             <a href="#">
                                 <img src="img/box1.jpg" alt="박스1">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item1</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box2.jpg" alt="박스2">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item2</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box3.jpg" alt="박스3">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item3</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box4.jpg" alt="박스4">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item4</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -669,21 +712,45 @@
                         <li>
                             <a href="#">
                                 <img src="img/box5.jpg" alt="박스1">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item5</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box6.jpg" alt="박스2">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item6</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box7.jpg" alt="박스3">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item7</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box8.jpg" alt="박스4">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item8</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -693,21 +760,45 @@
                         <li>
                             <a href="#">
                                 <img src="img/box1.jpg" alt="박스1">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item1</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box2.jpg" alt="박스2">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item2</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box3.jpg" alt="박스3">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item3</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box4.jpg" alt="박스4">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item4</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
@@ -717,21 +808,45 @@
                         <li>
                             <a href="#">
                                 <img src="img/box5.jpg" alt="박스1">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item5</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box6.jpg" alt="박스2">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item6</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box7.jpg" alt="박스3">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item7</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                         <li>
                             <a href="#">
                                 <img src="img/box8.jpg" alt="박스4">
+                                <div class="caption">
+                                    <br>
+                                    <h3>Item8</h3>
+                                    <br>
+                                    <p>12,345\</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
