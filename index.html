@@ -345,6 +345,7 @@
             padding: 100px 0;
             margin: 0 auto;
             text-align: center;
+            opacity: 0;
         }
         .se2_main h1{
             font-size: 30px;
@@ -916,19 +917,27 @@
                         </li>
                     </ul>
                 </div>
+                <div class="">
+
+                </div>
             </div>
             <!-- section2 박스 슬라이더 구간 끝-->
         </div>
     </section>
     <script>
         $(document).ready(function(){
+            var Trigger1 = false;
             //.toggle_menu 실행
             $('.toggle_menu').click(function(){
                 $('.toggle_nav').fadeToggle();
             });
             
-            //스크롤 시 header fixed만들기
+            //스크롤 시 header fixed만들기 opacity 효과
             $(window).scroll(function(){
+                if($('html').scrollTop() >= 500 && Trigger1 == false){
+                    $('#section2').animate({"opacity":"1"},1000);
+                    Trigger1 = true;
+                }
                 if($('html').scrollTop() >= 212){
                     $('.logo_nav').css({
                         "position":"fixed",
