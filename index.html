@@ -345,7 +345,7 @@
             padding: 100px 0;
             margin: 0 auto;
             text-align: center;
-            opacity: 0;
+            /* opacity: 0; */
         }
         .se2_main h1{
             font-size: 30px;
@@ -444,6 +444,37 @@
         }
         .caption p{
             font-size: 13px;
+        }
+        .section2_category{
+            margin: 0 auto;
+            margin-top: 20px;
+            width: 1280px;
+            height: 250px;
+            border: 1px solid black;
+        }
+        .section2_category>div{
+            width: 423px;
+            /* border: 1px solid black; */
+            height: 250px;
+            float: left;
+        }
+        .section2_category>div:nth-last-child(){
+            clear: both;
+        }
+        .se_icon{
+            list-style: none;
+        }
+        .se_icon>li{
+            display: inline-block;
+            width: 137px;
+            height: 125px;
+        }
+        .se_icon>li img{
+            position: relative;
+            top: 37px;
+        }
+        .se_icon>li a{
+            padding: 24px 45px 79px;
         }
     </style>
 </head>
@@ -917,7 +948,46 @@
                         </li>
                     </ul>
                 </div>
-                <div class="">
+            </div>
+            <div class="section2_category">
+                <div class="se_ca_1">
+                    <ul class="se_icon">
+                        <li>
+                            <a href="#">
+                                <img src="img/hello.png" alt="category1" width="54px" height="40">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/hello.png" alt="category1" width="54px" height="40">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/hello.png" alt="category1" width="54px" height="40">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/hello.png" alt="category1" width="54px" height="40">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/hello.png" alt="category1" width="54px" height="40">
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <img src="img/hello.png" alt="category1" width="54px" height="40">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="se_ca_2">
+                    
+                </div>
+                <div class="se_ca_3">
 
                 </div>
             </div>
@@ -933,11 +1003,11 @@
             });
             
             //스크롤 시 header fixed만들기 opacity 효과
-            $(window).scroll(function(){
-                if($('html').scrollTop() >= 500 && Trigger1 == false){
-                    $('#section2').animate({"opacity":"1"},1000);
-                    Trigger1 = true;
-                }
+             $(window).scroll(function(){
+                 if($('html').scrollTop() >= 500 && Trigger1 == false){
+                     $('#section2').animate({"opacity":"1"},1000);
+                     Trigger1 = true;
+                 }
                 if($('html').scrollTop() >= 212){
                     $('.logo_nav').css({
                         "position":"fixed",
