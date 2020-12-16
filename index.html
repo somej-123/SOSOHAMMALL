@@ -408,6 +408,7 @@
             overflow: hidden;
             width: 200px;
             height:230px;
+            border-radius: 5px;
         }
         .box_content li:hover .caption{
             transform: translateY(-115px);
@@ -418,7 +419,6 @@
         .box_content img{
             width: 200px;
             height: 230px;
-            border-radius: 5px;
             transition: 0.5s all ease-in-out;
         }
         .box_1{
@@ -455,7 +455,7 @@
             margin-top: 20px;
             width: 1280px;
             height: 211px;
-            border: 1px solid black;
+            box-shadow: 1px 1px 5px #000;
         }
         .section2_category>div{
             width: 423px;
@@ -579,6 +579,24 @@
         }
         .ca2_tr>td a:hover{
             color: #000;
+        }
+        .se_ca_3{
+            width: 432px !important;
+            position: relative;
+            text-align: center;
+        }
+        #banner{
+            opacity: 0.3;
+        }
+        #banner_text{
+            position: absolute;
+            top: 50px;
+            left: 50%;
+            transform: translate(-50%);
+            line-height: 50px;
+            font-size: 30px;
+            font-weight: bold;
+            color: #414040;
         }
     </style>
 </head>
@@ -809,6 +827,7 @@
             <br>
             <p class="serveTitle">이달의 베스트 상품 5가지를 미리 만나보세요</p>
             <!-- section2 박스 슬라이더 구간 시작-->
+            <!-- 메인 박스 시작-->
             <div class="se2_box">
                 <ul class="box_title">
                     <li class="on2">가구 / 수납</li>
@@ -1053,7 +1072,12 @@
                     </ul>
                 </div>
             </div>
+             <!-- 메인 박스 끝-->
+
+             <!-- 하단 박스 카테고리 시작-->
             <div class="section2_category">
+
+                <!-- 카테고리 1 시작-->
                 <div class="se_ca_1">
                     <ul class="se_icon">
                         <li class="se_icon_1">
@@ -1107,38 +1131,48 @@
                         </li>
                     </ul>
                 </div>
+                <!--카테고리 1 끝-->
+
+                <!-- 카테고리 2 시작-->
                 <div class="se_ca_2">
                     <h5 class="ca2_title">Notice&News</h5>
                     <table class="ca2_table">
                         <tr class="ca2_tr">
-                            <td><a href="#">안녕하세요 SOSOHAMMALL에 오신 것을 환영합니다.ffghfghfghgfdfff</a></td>
+                            <td><a href="#">안녕하세요 SOSOHAMMALL에 오신 것을 환영합니다.</a></td>
                             <td>2020-12-16</td>
                         </tr>
                         <tr class="ca2_tr">
-                            <td><a href="#">안녕하세요 SOSOHAMMALL에 오신 것을 환영합니다.sdfdsfsd</a></td>
+                            <td><a href="#">첫 회원가입시 회원님들께 5000원 적립 이벤트 및 다양한 상품 증정</a></td>
                             <td>2020-12-16</td>
                         </tr>
                         <tr class="ca2_tr">
-                            <td><a href="#">안녕하세요 SOSOHAMMALL에 오신 것을 환영합니다.sdfdsfsd</a></td>
+                            <td><a href="#">공지사항을 필히 읽어주세요</a></td>
                             <td>2020-12-16</td>
                         </tr>
                         <tr class="ca2_tr">
-                            <td><a href="#">안녕하세요 SOSOHAMMALL에 오신 것을 환영합니다.sdfdsfsd</a></td>
+                            <td><a href="#">문의사항이 있을시 언제든지 하단에 있는 전화번호로 연락바랍니다.</a></td>
                             <td>2020-12-16</td>
                         </tr>
                         <tr class="ca2_tr">
-                            <td><a href="#">안녕하세요 SOSOHAMMALL에 오신 것을 환영합니다.sdfdsfsd</a></td>
+                            <td><a href="#">이 사이트는 누구나 사용할 수 있습니다. 소스를 활용하실 분은 활용하시길 바랍니다.</a></td>
                             <td>2020-12-16</td>
                         </tr>
                     </table>
                 </div>
+                <!-- 카테고리 2 끝-->
+
+                <!-- 카테고리 3 시작-->
                 <div class="se_ca_3">
-                    
+                    <img src="img/se3_1.jpg" width="432" height="210" alt="여러 배너" id="banner">
+                    <p id="banner_text">배너 및 광고<br>또는 여러가지</p>
                 </div>
+                <!--카테고리 3 끝-->
             </div>
-            <!-- section2 박스 슬라이더 구간 끝-->
+            <!-- 하단 박스 카테고리 끝-->
         </div>
+         <!-- section2 박스 슬라이더 구간 끝-->
     </section>
+    <!--section 2 끝-->
     <script>
         $(document).ready(function(){
             var Trigger1 = false;
