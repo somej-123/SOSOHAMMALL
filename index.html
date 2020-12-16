@@ -412,10 +412,14 @@
         .box_content li:hover .caption{
             transform: translateY(-115px);
         }
+        .box_content li:hover img{
+            transform: scale(1.1);
+        }
         .box_content img{
             width: 200px;
             height: 230px;
-            border-radius: 5px
+            border-radius: 5px;
+            transition: 0.5s all ease-in-out;
         }
         .box_1{
             display: block;
@@ -465,6 +469,7 @@
         .se_icon{
             list-style: none;
             font-size: 0;
+            position: relative;
         }
         .se_icon>li{
             display: inline-block;
@@ -495,6 +500,45 @@
             padding:37px 0 27px;
             display: block;
         }
+        .itemBox{
+            min-width: 50px;
+            min-height: 10px;
+            background-color: #414040;
+            color: #fff;
+            position: absolute;
+            z-index: 100;
+            font-size: 12px;
+            border-radius: 10px;
+            padding: 10px;
+        }
+        .iconBox1{
+            top: -10px;
+            left: -100px;
+            display: none;
+        }
+        .iconBox2{
+            top: -10px;
+            display: none;
+        }
+        .iconBox3{
+            top: -10px;
+            right: -50px;
+            display: none;
+        }
+        .iconBox4{
+            top: 100px;
+            left: -100px;
+            display: none;
+        }
+        .iconBox5{
+            top: 90px;
+            display: none;
+        }
+        .iconBox6{
+            top: 100px;
+            right: -100px;
+            display: none;
+        }
 
         .se_ca_2{
             border-left: 1px solid #b6b5b5;
@@ -517,12 +561,12 @@
             border-collapse: collapse;
             border-spacing: 0;
             table-layout: fixed;
-            border-top: 1px solid #000;
+            border-top: 1px solid #8b8b8b;
         }
         .ca2_tr>td{
             color: #8b8b8b;
             padding: 8px 0;
-            border-bottom: 1px solid #000;
+            border-bottom: 1px solid #8b8b8b;
         }
         .ca2_tr>td:first-child{
             width: 280px;
@@ -1012,35 +1056,54 @@
             <div class="section2_category">
                 <div class="se_ca_1">
                     <ul class="se_icon">
-                        <li>
+                        <li class="se_icon_1">
                             <a href="#">
                                 <img src="img/mainbanner_icon_01.png" alt="category1" width="54px" height="40">
                             </a>
+                            <div class="iconBox1 itemBox">
+                                <p>신규 가입시 3000원 적립!</p>
+                            </div>
                         </li>
-                        <li>
+                        <li class="se_icon_2">
                             <a href="#">
                                 <img src="img/mainbanner_icon_02.png" alt="category2" width="54px" height="40">
                             </a>
+                            <div class="iconBox2 itemBox">
+                                <p>일반 후기 500원 적립</p>
+                                <p>사진 후기 1000원 적립</p>
+                            </div>
                         </li>
-                        <li>
+                        <li class="se_icon_3">
                             <a href="#">
                                 <img src="img/mainbanner_icon_03.png" alt="category3" width="54px" height="40">
                             </a>
+                            <div class="iconBox3 itemBox">
+                                <p>30일 출석체크시 3000원 적립!</h5>
+                            </div>
                         </li>
-                        <li>
+                        <li class="se_icon_4">
                             <a href="#">
                                 <img src="img/mainbanner_icon_04.png" alt="category4" width="54px" height="40">
                             </a>
+                            <div class="iconBox4 itemBox">
+                                <p>공지사항을 확인해주세요!</h5>
+                            </div>
                         </li>
-                        <li>
+                        <li class="se_icon_5">
                             <a href="#">
                                 <img src="img/mainbanner_icon_05.png" alt="category5" width="54px" height="40">
                             </a>
+                            <div class="iconBox5 itemBox">
+                                <p style="color: white;">궁금하신 부분은 언제나 상담문의 주세요!</h5>
+                            </div>
                         </li>
-                        <li>
+                        <li class="se_icon_6">
                             <a href="#">
                                 <img src="img/mainbanner_icon_06.png" alt="category6" width="54px" height="40">
                             </a>
+                            <div class="iconBox6 itemBox">
+                                <p>회원분들만을 위한 이벤트 준비중입니다!</h5>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -1070,7 +1133,7 @@
                     </table>
                 </div>
                 <div class="se_ca_3">
-
+                    
                 </div>
             </div>
             <!-- section2 박스 슬라이더 구간 끝-->
@@ -1115,6 +1178,21 @@
                     });
                 }
             });
+            //스크롤 끝
+
+            //카테고리 list 6개 FadeIn, FadeOut 설정
+            var $se_icon = $('.se_icon').children('li');
+            var index = 0;
+            $se_icon.mouseenter(function(){
+                index = $(this).index();
+                $('.iconBox'+(index+1)).stop().fadeIn(500);
+            });
+            $se_icon.mouseleave(function(){
+                index = $(this).index();
+                $('.iconBox'+(index+1)).stop().fadeOut(500);
+            });
+            //카테고리 list 끝
+
         });
     </script>
 </body>
