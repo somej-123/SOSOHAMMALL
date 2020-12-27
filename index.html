@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- jquery 최신버전 사용-->
+    <!-- jquery 3.5.1버전-->
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
     <script src="js/slide.js"></script>
     <script src="js/boxContent.js"></script>
@@ -30,7 +30,7 @@
             background-color: #fff;
             z-index: 98;
         }
-        /*상단 메뉴 네비*/
+        /*상단 메뉴 네비게이션*/
         nav{
             width: 1280px;
             margin: 0 auto;
@@ -360,7 +360,6 @@
             height: 350px;
             margin: 0 auto;
             margin-top: 100px;
-            border: 1px solid #979797;
             box-shadow: 1px 1px 3px gray;
         }
         .box_title{
@@ -455,7 +454,7 @@
             margin-top: 20px;
             width: 1280px;
             height: 211px;
-            box-shadow: 1px 1px 5px #000;
+            box-shadow: 1px 1px 3px gray;
         }
         .section2_category>div{
             width: 423px;
@@ -597,6 +596,105 @@
             font-size: 30px;
             font-weight: bold;
             color: #414040;
+        }
+
+        /* section 3 시작*/
+        #section3{
+            background-color: #f9f9f9;
+            min-width: 1280px;
+            height: 700px;
+            padding: 100px 0;
+            margin: 0 auto;
+            text-align: center;
+            /*opacity: 0;*/
+        }
+        .se3_main_span{
+            font-weight: bold;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #e2e2e2;
+        }
+        .se3_content{
+            margin: 0 auto;
+            list-style: none;
+            padding-top: 100px;
+        }
+        .se3_content>li{
+            display: inline-block;
+        }
+        .se3_c1{
+            width: 320px;
+            height: 500px;
+        }
+        .se3_c2{
+            width: 320px;
+            height: 245px;
+            padding-bottom: 5px;
+        }
+        .se3_c3{
+            width: 320px;
+            height: 245px;
+            padding-top: 5px;
+        }
+        .se3_c4{
+            width: 320px;
+            height: 500px;
+        }
+        /* section 3 끝*/
+
+        /* section 4 시작*/
+        #section4{
+            background-color: #fff;
+            min-width: 1280px;
+            height: 700px;
+            padding: 100px 0;
+            margin: 0 auto;
+            text-align: center;
+            /*opacity: 0;*/
+        }
+        .se4_title{
+            font-size: 26px;
+            color: #414040;
+        }
+        .se4_content{
+            margin: 50px;
+            padding: 50px;
+        }
+        .se4_content ul{
+            list-style: none;
+        }
+        .se4_content li{
+            display: inline-block;
+            margin: 30px;
+            width: 300px;
+            height: 500px;
+            overflow: hidden;
+            position: relative;
+            z-index: 5;
+            border-radius: 5px;
+        }
+        .se4_content li:hover .se4_caption{
+            transform: translateY(-100px);
+        }
+        .se4_content li:hover img{
+            transform: scale(1.2);
+        }
+        .se4_content li img{
+            transition: ease-in-out all 0.5s;
+        }
+        .se4_caption{
+            transition: ease-in-out all 0.5s;
+            color: #fff;
+            width: 300px;
+            height: 470px;
+            background-color: rgba(0, 0, 0, 0.3);
+            position: absolute;
+            z-index: 10;
+        }
+        .se4_caption h3{
+            padding-top: 20px;
+        }
+        .se4_caption p{
+            padding-top: 10px;
         }
     </style>
 </head>
@@ -1173,6 +1271,130 @@
          <!-- section2 박스 슬라이더 구간 끝-->
     </section>
     <!--section 2 끝-->
+
+    <!-- section 3 시작-->
+    <section id="section3">
+        <div class="se3_main">
+            <!--section3 title-->
+            <h1 style="font-weight:100;">THIS WEEK THE <span class="se3_main_span">BEST SELECTION</span> OF ITEMS & EVENT</h1>
+
+            <!-- section3 contents 시작-->
+            <ul class="se3_content">
+                <li>
+                    <div class="se3_c1">
+                        <a href="#">
+                            <img src="img/banner1.jpg" alt="배너1" width="100%" height="100%">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="se3_c2">
+                        <a href="#">
+                            <img src="img/banner2.png" alt="배너2" width="100%" height="100%">
+                        </a>
+                    </div>
+                    <div class="se3_c3">
+                        <a href="#">
+                            <img src="img/banner3.png" alt="배너3" width="100%" height="100%">
+                        </a>
+                    </div>
+                </li>
+                <li>
+                    <div class="se3_c4">
+                        <a href="#">
+                            <img src="img/banner4.jpg" alt="배너3" width="100%" height="100%">
+                        </a>
+                    </div>
+                </li>
+            </ul>
+            <!-- section3 contents 끝-->
+        </div>
+    </section>
+    <!-- section 3 끝-->
+
+    <!-- section 4 시작-->
+    <section id="section4">
+        <div class="se4_main">
+            <p class="se4_title">NEW ARRIVALS</p>
+            <div class="se4_content">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_1.jpg" alt="section4 photo1" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 1</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_2.jpg" alt="section4 photo2" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 2</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_3.jpg" alt="section4 photo3" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 3</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_4.jpg" alt="section4 photo4" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 4</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_5.jpg" alt="section4 photo5" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 5</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_6.jpg" alt="section4 photo6" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 6</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_7.jpg" alt="section4 photo7" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 7</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="img/se4_8.jpg" alt="section4 photo8" width="100%" height="100%">
+                            <div class="se4_caption">
+                                <h3>상품 8</h3>
+                                <p>12,345\</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- section 4 끝-->
     <script>
         $(document).ready(function(){
             var Trigger1 = false;
@@ -1182,36 +1404,36 @@
             });
             
             //스크롤 시 header fixed만들기 opacity 효과
-             $(window).scroll(function(){
-                 if($('html').scrollTop() >= 500 && Trigger1 == false){
-                     $('#section2').animate({"opacity":"1"},1000);
-                     Trigger1 = true;
-                 }
-                if($('html').scrollTop() >= 212){
-                    $('.logo_nav').css({
-                        "position":"fixed",
-                        "top":50,
-                        "border-top":"none",
-                        "width":"100%"
-                        });
-                    $('.toggle_nav').css({
-                        "position":"fixed",
-                        "top":100
-                    });
-                }else{
-                    $('.logo_nav').css({
-                        "position":"static",
-                        "border-top":"3px solid black" 
-                    });
-                    $('.toggle_nav').css({
-                        "position":"absolute",
-                        "left":0,
-                        "right":0,
-                        "margin":"auto",
-                        "top":313
-                    });
-                }
-            });
+            //  $(window).scroll(function(){
+            //      if($('html').scrollTop() >= 500 && Trigger1 == false){
+            //          $('#section2').animate({"opacity":"1"},1000);
+            //          Trigger1 = true;
+            //      }
+            //     if($('html').scrollTop() >= 212){
+            //         $('.logo_nav').css({
+            //             "position":"fixed",
+            //             "top":50,
+            //             "border-top":"none",
+            //             "width":"100%"
+            //             });
+            //         $('.toggle_nav').css({
+            //             "position":"fixed",
+            //             "top":100
+            //         });
+            //     }else{
+            //         $('.logo_nav').css({
+            //             "position":"static",
+            //             "border-top":"3px solid black" 
+            //         });
+            //         $('.toggle_nav').css({
+            //             "position":"absolute",
+            //             "left":0,
+            //             "right":0,
+            //             "margin":"auto",
+            //             "top":313
+            //         });
+            //     }
+            // });
             //스크롤 끝
 
             //카테고리 list 6개 FadeIn, FadeOut 설정
