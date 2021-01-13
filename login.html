@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="header.css">
+    <link rel="stylesheet" type="text/css" href="footer.css">
+    <!-- jquery 3.5.1버전-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/boxContent.js"></script>
+    <title>SOSOHAM::Login</title>
+    <style>
+        #Login{
+            position: relative;
+            min-width: 1280px;
+            height: 700px;
+        }
+        #Login::after{
+            background:url("img/box1\(2\).jpg");
+            top:0;
+            left:0;
+            position:absolute;
+            background-size:100%;
+            opacity:0.5 !important;
+            filter:alpha(opacity=50);
+            z-index:-1;
+            content:"";
+            width:100%;
+            height:100%;
+        }
+    </style>
+</head>
+<body>
+    <!--상당 메뉴바-->
+<header>
+    <!--네비게이션 시작-->
+    <nav>
+        <div class="left_nav">
+            <ul>
+                <li>
+                    <a href="#">NOTICE</a>
+                </li>
+                <li>
+                    <a href="#">Q & N</a>
+                </li>
+                <li>
+                    <a href="#">REVIEW</a>
+                </li>
+                <li>
+                    <a href="#">EVENT</a>
+                </li>
+                <li>
+                    <a href="#">DAILY CHECK</a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_nav">
+            <ul>
+                <li>
+                    <a href="#">LOGIN</a>
+                </li>
+                <li>
+                    <a href="#">JOIN US</a>
+                </li>
+                <li>
+                    <a href="#">CART (0)</a>
+                </li>
+                <li>
+                    <a href="#">ORDER</a>
+                </li>
+                <li>
+                    <a href="#">MY PAGE</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!--네비게이션 끝-->
+</header>
+<!-- 상단 메뉴바 끝-->
+<!-- 로고 이미지 및 sns 버튼-->
+<div id="logo">
+    <div class="inner">
+        <img src="img/logo.png" alt="로고" onclick="window.open('index.html', '_self')">
+        <div class="logo_sns">
+            <ul>
+                <li>
+                    <img src="img/네이버밴드2.png" alt="네이버 벤드" onmouseover="src='img/네이버밴드.png'" onmouseout="src='img/네이버밴드2.png'" onclick="window.open('http://band.us/home')">
+                </li>
+                <li>
+                    <img src="img/인스타그램2.png" alt="인스타그램" onmouseover="src='img/인스타그램1.png'" onmouseout="src='img/인스타그램2.png'" onclick="window.open('https://www.instagram.com/?hl=ko')">
+                </li>
+                <li>
+                    <img src="img/카카오스토리2.png" alt="네이버 벤드" onmouseover="src='img/카카오스토리1.png'" onmouseout="src='img/카카오스토리2.png'" onclick="window.open('https://accounts.kakao.com/login/kakaostory')">
+                </li>
+                <li>
+                    <img src="img/페이스북2.png" alt="네이버 벤드" onmouseover="src='img/페이스북.png'" onmouseout="src='img/페이스북2.png'" onclick="window.open('https://www.facebook.com/')">
+                </li>
+                <li class="search">
+                    <form action="">
+                        <input type="text" placeholder="검색어를 입력해주세요" class="search_box">
+                        <button type="submit" class="search_submit"></button>
+                    </form>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!-- 로고 이미지 및 sns 버튼 끝-->
+<!-- fixed가 될 메뉴창-->
+<div class="logo_nav">
+    <div class="logo_navInner">
+        <img src="img/menu.png" alt="토글메뉴" width="30" height="30" style="float: left;" class="toggle_menu">
+        <ul>
+            <li>
+                <a href="#">BEST 30</a>
+            </li>
+            <li>
+                <a href="#">new 5%</a>
+            </li>
+            <li>
+                <a href="#">EVENT SALE</a>
+            </li>
+            <li>
+                <a href="#">SEASON</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- fixed가 될 메뉴창 끝-->
+<!-- Toggle네비 메뉴-->
+<div class="toggle_nav">
+    <div class="toggle_navInner">
+        <ul>
+            <li>
+                <h2>가구/수납</h2>
+            </li>
+            <hr>
+            <li>
+                <a href="#">수납/정리</a>
+            </li>
+            <li>
+                <a href="#">행거/훅</a>
+            </li>
+            <li>
+                <a href="#">바구니/박스</a>
+            </li>
+            <li>
+                <a href="#">선반/수납장</a>
+            </li>
+            <li>
+                <a href="#">데스크/책장수납</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>페브릭/생활</h2>
+            </li>
+            <hr>
+            <li>
+                <a href="#">커튼</a>
+            </li>
+            <li>
+                <a href="#">침구</a>
+            </li>
+            <li>
+                <a href="#">카페트/러그</a>
+            </li>
+            <li>
+                <a href="#">페브릭소품</a>
+            </li>
+            <li>
+                <a href="#">홈케어</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>데코/조명</h2>
+            </li>
+            <hr>
+            <li>
+                <a href="#">조명/스탠드</a>
+            </li>
+            <li>
+                <a href="#">시계/그림</a>
+            </li>
+            <li>
+                <a href="#">플라워</a>
+            </li>
+            <li>
+                <a href="#">캔들/디퓨저</a>
+            </li>
+            <li>
+                <a href="#">DIY/데코소품</a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <h2>주방</h2>
+            </li>
+            <hr>
+            <li>
+                <a href="#">컵/텀블러/커피잔</a>
+            </li>
+            <li>
+                <a href="#">식기</a>
+            </li>
+            <li>
+                <a href="#">주방잡화/커트러리</a>
+            </li>
+            <li>
+                <a href="#">조리도구</a>
+            </li>
+            <li>
+                <a href="#">주방수납</a>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Toggle 고정 메뉴  끝-->
+<!-- fixed가 될 메뉴창 끝-->
+
+<section id="Login">
+    <div>
+
+    </div>
+</section>
+
+<!-- Footer 시작-->
+<footer id="footer">
+    <div class="footer_title">
+        <a href="#">
+            <h1>SOSOHAM</h1>
+        </a>
+    </div>
+    <div class="footer_Content">
+                <p>MANAGER <span>우정호</span> CALL CENTER <span>01062726430</span> EMAIL ADDRESS : <a href="mailto:somej@naver.com">우정호(somej@naver.com)</a></p>
+                <p>COMPANY <span>SOSOHAM</span> BUSINESS REGISTRATION NO COPYRIGHT © <span>SOSOHAM</span>. ALL RIGHTS RESERVED.</p>
+    </div>
+</footer>
+<!-- Footer 5 끝-->
+
+<script>
+    $(document).ready(function(){
+        var Trigger1 = false;
+        //.toggle_menu 실행
+        $('.toggle_menu').click(function(){
+            $('.toggle_nav').fadeToggle();
+        });
+        
+        //스크롤 시 header fixed만들기 opacity 효과
+         $(window).scroll(function(){
+             if($('html').scrollTop() >= 500 && Trigger1 == false){
+                 $('#section2').animate({"opacity":"1"},1000);
+                 Trigger1 = true;
+             }
+            if($('html').scrollTop() >= 212){
+                $('.logo_nav').css({
+                    "position":"fixed",
+                    "top":50,
+                    "border-top":"none",
+                    "width":"100%"
+                    });
+                $('.toggle_nav').css({
+                    "position":"fixed",
+                    "top":100
+                });
+            }else{
+                $('.logo_nav').css({
+                    "position":"static",
+                    "border-top":"3px solid black" 
+                });
+                $('.toggle_nav').css({
+                    "position":"absolute",
+                    "left":0,
+                    "right":0,
+                    "margin":"auto",
+                    "top":313
+                });
+            }
+        });
+        //스크롤 끝
+
+        //카테고리 list 6개 FadeIn, FadeOut 설정
+        var $se_icon = $('.se_icon').children('li');
+        var index = 0;
+        $se_icon.mouseenter(function(){
+            index = $(this).index();
+            $('.iconBox'+(index+1)).stop().fadeIn(500);
+        });
+        $se_icon.mouseleave(function(){
+            index = $(this).index();
+            $('.iconBox'+(index+1)).stop().fadeOut(500);
+        });
+        //카테고리 list 끝
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+#footer{
+    min-width: 1280px;
+    padding-left: 257px;
+    height: 130px;
+    overflow: hidden;
+    position: relative;
+    z-index: 9;
+    border-top:1px solid #e2e2e2;
+}
+#footer span{
+    color: #000;
+}
+.footer_title{
+    float: left;
+    width: 300px;
+    margin-top: 50px;
+}
+.footer_Content{
+    width: 640px;
+    line-height: 28px;
+    float: left;
+    margin-top: 35px;
+    font-size: 13px;
+    color: #a8a8a8;
+}
